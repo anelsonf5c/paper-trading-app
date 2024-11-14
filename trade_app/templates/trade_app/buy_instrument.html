@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Buy Instrument</title>
+</head>
+<body>
+    <h1>Buy {{ instrument.symbol }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Quantity:</label>
+        <input type="number" name="quantity" required>
+        <button type="submit">Buy</button>
+    </form>
+    
+</body>
+</html>

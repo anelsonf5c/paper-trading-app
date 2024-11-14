@@ -1,0 +1,7 @@
+<h1>Sell {{ instrument.symbol }}</h1>
+<form method="post">
+    {% csrf_token %}
+    <label>Quantity:</label>
+    <input type="number" name="quantity" required>
+    <button type="submit">Sell</button>
+</form>

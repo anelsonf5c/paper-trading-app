@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Your Portfolio</title>
+</head>
+<body>
+    <h1>Your Portfolio</h1>
+    <table>
+        <tr>
+            <th>Instrument</th>
+            <th>Quantity</th>
+            <th>Current Price</th>
+            <th>Total Value</th>
+        </tr>
+        {% for item in portfolio_items %}
+        <tr>
+            <td>{{ item.instrument.symbol }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>${{ item.instrument.price }}</td>
+            <td>${{ item.instrument.price * item.quantity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>Total Balance: ${{ balance }}</p>
+</body>
+</html>
